@@ -8,26 +8,32 @@
     </head>
     <body bgcolor="#CFA1A1">
         <center>
-        <table border="1" align="center">
-        <tr></td><label for="fname">Firstname: </label><tr></td>
-        <input type="text"><br><br>
+        <table border="0" align="center">
+        <form>
+            <form name="frm-user" action="singup.php" method="post">  
+                <tr></td><label for="fname">Firstname: </label><tr></td>
+                <input type = "text" name = "fname" required><br><br>
+            </form>
+            
+            <form name="frm-user" action="singup.php" method="post">
+                <tr></td><label for="lname">Lastname: </label><tr></td>
+                <input type = "text" name = "lname" required><br><br>
+            </form>
         
-        <tr></td><label for="lname">Lastname: </label><tr></td>
-        <input type="text"><br><br>
+                <tr></td><label for="email">Email: </label><tr></td>
+                <input type = "email" name = "email" required> <br><br>
         
-        <tr></td><label for="email">Email: </label><tr></td>
-        <input type="email"> <br><br>
+                <tr></td><label for="passwd">Password: </label><tr></td>
+                <input type = "password" name = "passwd" required><br><br>
         
-        <tr></td><label for="passwd">Password: </label><tr></td>
-        <input type="password"><br><br>
+                <tr></td><label for="passwd a">Password again: </label><tr></td>
+                <input type = "password"> <br><br>
         
-        <tr></td><label for="passwd a">Password again: </label><tr></td>
-        <input type="password"> <br><br>
+                <tr></td><label for="mphone">Mobile phone: </label><tr></td> 
+                <input type = "number" name = "mphone" required><br><br><br>
         
-        <tr></td><label for="mphone">Mobile phone: </label><tr></td> 
-        <input type="number"><br><br><br>
-        
-        <button>Register</button>
+                <button>Register</button>
+        </form>
         </table>
         </center>
     </body>
