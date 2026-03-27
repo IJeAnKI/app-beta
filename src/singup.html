@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
-        <link rel="icon" type="imagr/png" href="icons/Home.png">
-    </head>
-    <body bgcolor="#CFA1A1">
-        <center>
-        <table border="0" align="center">
-        
-            <form name="frm-user" action="singup.php" method="post">  
-                <tr></td><label for="fname">Firstname: </label><tr></td>
-                <input type = "text" name = "fname" required><br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" type="image/png" href="icons/Home.png">
+</head>
+<body bgcolor="#CFA1A1">
+    <center>
+    <table border="0" align="center">
+    
+        <!-- Corrección: signup.php -->
+        <form name="frm-user" action="signup.php" method="post">  
             
-                <tr></td><label for="lname">Lastname: </label><tr></td>
-                <input type = "text" name = "lname" required><br><br>
+            <tr></td><label for="fname">Firstname: </label><tr></td>
+            <input type="text" name="fname" required><br><br>
         
-                <tr></td><label for="email">Email: </label><tr></td>
-                <input type = "email" name = "email" required> <br><br>
+            <tr></td><label for="lname">Lastname: </label><tr></td>
+            <input type="text" name="lname" required><br><br>
+    
+            <tr></td><label for="email">Email: </label><tr></td>
+            <input type="email" name="email" required> <br><br>
+    
+            <tr></td><label for="passwd">Password: </label><tr></td>
+            <input type="password" name="passwd" required><br><br>
+    
+            <tr></td><label for="passwd2">Password again: </label><tr></td>
+            <!-- Corrección: agregar name -->
+            <input type="password" name="passwd2" required> <br><br>
+    
+            <tr></td><label for="mphone">Mobile phone: </label><tr></td> 
+            <input type="number" name="mphone" required><br><br><br>
+    
+            <button type="submit">Register</button>
         
-                <tr></td><label for="passwd">Password: </label><tr></td>
-                <input type = "password" name = "passwd" required><br><br>
-        
-                <tr></td><label for="passwd a">Password again: </label><tr></td>
-                <input type = "password"> <br><br>
-        
-                <tr></td><label for="mphone">Mobile phone: </label><tr></td> 
-                <input type = "number" name = "mphone" required><br><br><br>
-        
-                <button type="submit">Register</button>
-            
-        </table>
         </form>
-        </center>
-    </body>
+    
+    </table>
+    </center>
+</body>
 </html>
