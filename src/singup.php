@@ -24,7 +24,14 @@
         exit();
     }
 
-    
+    // VALIDAR TELÉFONO
+    $check_phone = "SELECT 1 FROM users WHERE mobile_phone = $1";
+    $res_phone = pg_query_params($local_conn, $check_phone, array($m_phone));
+
+    if (pg_num_rows($res_phone) > 0) {
+        echo "Error: El número de celular ya está registrado";
+        exit();
+    }
 
 $res_local = pg_query($local_conn, $sql); 
 
