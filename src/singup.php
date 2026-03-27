@@ -32,6 +32,7 @@
         echo "Error: El número de celular ya está registrado";
         exit();
     }
+    
 
 $res_local = pg_query($local_conn, $sql); 
 
