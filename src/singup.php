@@ -11,7 +11,7 @@
 
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, password)
-        VALUES('$f_name', '$l_name', '$e_mail', '$m_phone', '$enc_sswd')
+        VALUES('$f_name', '$l_name', '$e_mail', '$m_phone', '$enc_pass')
     ";    
 
     //Execute query
