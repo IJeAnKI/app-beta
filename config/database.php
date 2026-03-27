@@ -21,14 +21,14 @@
         port = $LOCAL_PORT
     ";
     
-    /*
+    
     $supa_data_connection = "
         host = $SUPA_HOST
         dbname = $SUPA_DBNAME
         user = $SUPA_USERNAME
         password = $SUPA_PASSWORD
         port = $SUPA_PORT
-    "; */
+    ";
     
     
     //Local connection
@@ -41,7 +41,7 @@
         echo "local succes connection ";
     }
     
-    /*
+    
     //Supabase connection
     $supa_conn = pg_connect($supa_data_connection);
 
@@ -51,5 +51,4 @@
     }else{
         echo "<br>supa succes connection ";
     }
-    */
 ?>
