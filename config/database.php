@@ -3,7 +3,7 @@
     $LOCAL_HOST = 'localhost'; //127.0.0.1
     $LOCAL_DBNAME = 'app_beta';
     $LOCAL_USERNAME = 'postgres';
-    $LOCAL_PASSWORD = '1010139077_Jccr';
+    $LOCAL_PASSWORD = 'unicesmag';
     $LOCAL_PORT = '5432';
     
     // Supabase database configuration
@@ -49,6 +49,6 @@
         echo "Error: Unable to connect to local database";
         exit();
     }else{
-        echo "<br>supa succes connection ";
+        echo "<br> supa succes connection ";
     }
 ?>
