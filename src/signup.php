@@ -47,7 +47,7 @@ if (!$exists_row_local[0]) {
     $local_table = 'users';
     // Verificar los nombres de columnas en local
     $check_cols = "SELECT column_name FROM information_schema.columns 
-                   WHERE table_name = 'users' AND column_name IN ('password', 'pasword', 'firstname', 'first_name', 'lastname', 'last_name')";
+                WHERE table_name = 'users' AND column_name IN ('password', 'pasword', 'firstname', 'first_name', 'lastname', 'last_name')";
     $cols_res = pg_query($local_conn, $check_cols);
     
     $local_password_col = 'pasword'; // default
