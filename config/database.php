@@ -1,6 +1,6 @@
 <?php
     // Local database configuration
-    $LOCAL_HOST = 'localhost'; //127.0.0.1
+    $LOCAL_HOST = 'localhost';
     $LOCAL_DBNAME = 'app_beta';
     $LOCAL_USERNAME = 'postgres';
     $LOCAL_PASSWORD = '1010139077_Jccr';
@@ -15,40 +15,31 @@
 
     $local_data_connection = "
         host = $LOCAL_HOST
+        port = $LOCAL_PORT
         dbname = $LOCAL_DBNAME
         user = $LOCAL_USERNAME
         password = $LOCAL_PASSWORD
-        port = $LOCAL_PORT
     ";
-    
     
     $supa_data_connection = "
         host = $SUPA_HOST
+        port = $SUPA_PORT
         dbname = $SUPA_DBNAME
         user = $SUPA_USERNAME
         password = $SUPA_PASSWORD
-        port = $SUPA_PORT
     ";
     
+    // Local connection
+    $local_conn = @pg_connect($local_data_connection);
     
-    //Local connection
-    $local_conn = pg_connect($local_data_connection);
-
     if(!$local_conn){
-        echo "Error: Unable to connect to local database";
-        exit();
-    }else{
-        echo "local succes connection ";
+        error_log("Error: Unable to connect to local database");
     }
     
+    // Supabase connection
+    $supa_conn = @pg_connect($supa_data_connection);
     
-    //Supabase connection
-    $supa_conn = pg_connect($supa_data_connection);
-
     if(!$supa_conn){
-        echo "Error: Unable to connect to local database";
-        exit();
-    }else{
-        echo "<br> supa succes connection ";
+        error_log("Error: Unable to connect to Supabase database");
     }
 ?>

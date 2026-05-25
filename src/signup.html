@@ -8,30 +8,53 @@
 </head>
 <body bgcolor="#F0D284">
     <table border="1" align="center">
-
-<form name="frtn-user" action="signup.php" method="post" align="center">
-    
-    <tr><td><label for="first">Firstname</label><br>
-        <input type="text" name = "fname" required> <br>
-
-    <label for="last">Lastname</label><br>
-        <input type="text" name = "lname" required> <br>
-
-    <label for="email">Email</label><br>
-    <input type="email" name = "email" required> <br>
-
-    <label for="Pas">Password</label><br>
-    <input type="password" name = "pasword" required> <br>
-
-    <label for="ConPas">Confirm Password</label><br> <input type="password"><br>
-
-
-    <label for="Telephone">Mobile Phone</label><br>
-    <input type="text" name="mphone">
-    <br>
-    <button type="submit">Register</button>
-</form>
-
+        <form name="frtn-user" action="signup.php" method="post" align="center" onsubmit="return validateForm()">
+            <tr>
+                <td>
+                    <label for="first">Firstname</label><br>
+                    <input type="text" name="fname" required> <br>
+                
+                    <label for="last">Lastname</label><br>
+                    <input type="text" name="lname" required> <br>
+                
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" required> <br>
+                
+                    <label for="Pas">Password</label><br>
+                    <input type="password" name="pasword" id="password" required> <br>
+                
+                    <label for="ConPas">Confirm Password</label><br>
+                    <input type="password" name="confirm_password" id="confirm_password" required> <br>
+                    <span id="passwordError" style="color: red; font-size: 12px;"></span><br>
+                
+                    <label for="Telephone">Mobile Phone</label><br>
+                    <input type="text" name="mphone">
+                    <br>
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+        </form>
     </table>
+    
+    <script>
+        function validateForm() {
+            var password = document.getElementById('password').value;
+            var confirm = document.getElementById('confirm_password').value;
+            var errorSpan = document.getElementById('passwordError');
+            
+            if (password !== confirm) {
+                errorSpan.textContent = 'Las contraseñas no coinciden';
+                return false;
+            }
+            
+            if (password.length < 6) {
+                errorSpan.textContent = 'La contraseña debe tener al menos 6 caracteres';
+                return false;
+            }
+            
+            errorSpan.textContent = '';
+            return true;
+        }
+    </script>
 </body>
 </html>
