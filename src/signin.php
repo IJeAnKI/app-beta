@@ -33,7 +33,7 @@ if (!$row_check[0]) {
 } else {
     // Verificar nombres de columnas en users
     $check_cols = "SELECT column_name FROM information_schema.columns 
-                   WHERE table_name = 'users' AND column_name IN ('password', 'pasword', 'firstname', 'first_name')";
+                WHERE table_name = 'users' AND column_name IN ('password', 'pasword', 'firstname', 'first_name')";
     $cols_res = pg_query($local_conn, $check_cols);
     
     if ($cols_res) {
